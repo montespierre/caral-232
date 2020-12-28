@@ -23,6 +23,6 @@ public class EmpleadoController {
 		List<Empleado> lista = empleadoService.listarTodos();
 		model.addAttribute("titulo", "LISTA DE ARTICULOS");
 		model.addAttribute("empleados", lista);
-		return "/empleados/listado";
+		return "empleados/listado";
 	}
 }
