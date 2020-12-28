@@ -32,11 +32,20 @@ public class Articulo implements Serializable{
 	private Long cantExis;
 	
 	public Articulo() {
-		this.idArticulo = 0L;
-		this.descArticulo = "";
-		this.precioUnit = 0.00;
-		this.cantExis = 0L;
+
 	}
+
+	
+	
+	public Articulo(Long idArticulo, String descArticulo, Double precioUnit, Long cantExis) {
+		super();
+		this.idArticulo = idArticulo;
+		this.descArticulo = descArticulo;
+		this.precioUnit = precioUnit;
+		this.cantExis = cantExis;
+	}
+
+
 
 	public Long getIdArticulo() {
 		return idArticulo;
