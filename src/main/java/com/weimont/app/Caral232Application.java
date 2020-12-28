@@ -7,8 +7,10 @@ import org.springframework.context.annotation.Bean;
 
 import com.weimont.app.entity.Articulo;
 import com.weimont.app.entity.Empleado;
+import com.weimont.app.entity.Venta;
 import com.weimont.app.repository.ArticuloRepository;
 import com.weimont.app.repository.EmpleadoRepository;
+import com.weimont.app.repository.VentaRepository;
 
 
 
@@ -20,7 +22,7 @@ public class Caral232Application {
 	}
 
 	@Bean
-	ApplicationRunner applicationRunner(ArticuloRepository articuloRepository, EmpleadoRepository empleadoRepository) {
+	ApplicationRunner applicationRunner(ArticuloRepository articuloRepository, EmpleadoRepository empleadoRepository, VentaRepository ventaRepository) {
 		return args -> {
 			articuloRepository.save(new Articulo((long) 1, "Zapato", 12.5, (long) 200));
 			articuloRepository.save(new Articulo((long) 2, "Polo", (double) 14, (long) 500));
@@ -28,6 +30,10 @@ public class Caral232Application {
 			empleadoRepository.save(new Empleado((long) 1, "Juan", "Vendedor", (long) 232121));
 			empleadoRepository.save(new Empleado((long) 2, "Carlos", "Cajero", (long) 5151));
 			empleadoRepository.save(new Empleado((long) 3, "Jose", "Vendedor", (long) 8888));
+			ventaRepository.save(new Venta((long) 1, (long) 2, "12/01/2020", "12:45", (long) 300, 150.44, 12.45, 151.111));
+			ventaRepository.save(new Venta((long) 2, (long) 1, "12/02/2020", "12:45", (long) 400, 50.44, 14.45, 551.111));
+			ventaRepository.save(new Venta((long) 3, (long) 3, "12/03/2020", "12:45", (long) 500, 350.44, 2.45, 651.111));
+			
 		};
 	}
 	
