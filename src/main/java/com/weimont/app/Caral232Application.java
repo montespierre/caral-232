@@ -27,12 +27,17 @@ public class Caral232Application {
 			articuloRepository.save(new Articulo((long) 1, "Zapato", 12.5, (long) 200));
 			articuloRepository.save(new Articulo((long) 2, "Polo", (double) 14, (long) 500));
 			articuloRepository.save(new Articulo((long) 3, "Camisa", 50.4, (long) 300));
-			empleadoRepository.save(new Empleado((long) 1, "Juan", "Vendedor", (long) 232121));
-			empleadoRepository.save(new Empleado((long) 2, "Carlos", "Cajero", (long) 5151));
-			empleadoRepository.save(new Empleado((long) 3, "Jose", "Vendedor", (long) 8888));
-			ventaRepository.save(new Venta((long) 1, (long) 2, "12/01/2020", "12:45", (long) 300, 150.44, 12.45, 151.111));
-			ventaRepository.save(new Venta((long) 2, (long) 1, "12/02/2020", "12:45", (long) 400, 50.44, 14.45, 551.111));
-			ventaRepository.save(new Venta((long) 3, (long) 3, "12/03/2020", "12:45", (long) 500, 350.44, 2.45, 651.111));
+			
+			Empleado empleado1 = new Empleado((long) 1, "Juan", "Vendedor", (long) 232121);
+			Empleado empleado2 = new Empleado((long) 2, "Carlos", "Cajero", (long) 5151);
+			Empleado empleado3 = new Empleado((long) 3, "Jose", "Vendedor", (long) 8888);
+			
+			empleadoRepository.save(empleado1);
+			empleadoRepository.save(empleado2);
+			empleadoRepository.save(empleado3);
+			ventaRepository.save(new Venta((long) 1, empleado1, "12/01/2020", "12:45", (long) 300, 150.44, 12.45, 151.111));
+			ventaRepository.save(new Venta((long) 2, empleado1, "12/02/2020", "12:45", (long) 400, 50.44, 14.45, 551.111));
+			ventaRepository.save(new Venta((long) 3, empleado3, "12/03/2020", "12:45", (long) 500, 350.44, 2.45, 651.111));
 			
 		};
 	}

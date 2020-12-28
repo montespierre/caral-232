@@ -53,12 +53,11 @@ public class Venta implements Serializable{
 	}
 
 
-
-	public Venta(Long idVenta, Long idEmpleado, String fechaVenta, String horaVenta, Long unidTotales,
+	public Venta(Long idVenta, Empleado empleado, String fechaVenta, String horaVenta, Long unidTotales,
 			Double subTotal, Double igv, Double imporTotal) {
 		super();
 		this.idVenta = idVenta;
-		this.empleado.setIdEmpleado(idEmpleado);
+		this.empleado = empleado;
 		this.fechaVenta = fechaVenta;
 		this.horaVenta = horaVenta;
 		this.unidTotales = unidTotales;
@@ -66,7 +65,6 @@ public class Venta implements Serializable{
 		this.igv = igv;
 		this.imporTotal = imporTotal;
 	}
-
 
 
 	public Long getIdVenta() {
@@ -74,11 +72,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setIdVenta(Long idVenta) {
 		this.idVenta = idVenta;
 	}
-
 
 
 	public Empleado getEmpleado() {
@@ -86,11 +82,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setEmpleado(Empleado empleado) {
 		this.empleado = empleado;
 	}
-
 
 
 	public String getFechaVenta() {
@@ -98,11 +92,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setFechaVenta(String fechaVenta) {
 		this.fechaVenta = fechaVenta;
 	}
-
 
 
 	public String getHoraVenta() {
@@ -110,11 +102,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setHoraVenta(String horaVenta) {
 		this.horaVenta = horaVenta;
 	}
-
 
 
 	public Long getUnidTotales() {
@@ -122,11 +112,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setUnidTotales(Long unidTotales) {
 		this.unidTotales = unidTotales;
 	}
-
 
 
 	public Double getSubTotal() {
@@ -134,11 +122,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setSubTotal(Double subTotal) {
 		this.subTotal = subTotal;
 	}
-
 
 
 	public Double getIgv() {
@@ -146,11 +132,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setIgv(Double igv) {
 		this.igv = igv;
 	}
-
 
 
 	public Double getImporTotal() {
@@ -158,11 +142,9 @@ public class Venta implements Serializable{
 	}
 
 
-
 	public void setImporTotal(Double imporTotal) {
 		this.imporTotal = imporTotal;
 	}
-
 
 
 	@Override
@@ -171,6 +153,10 @@ public class Venta implements Serializable{
 				+ horaVenta + ", unidTotales=" + unidTotales + ", subTotal=" + subTotal + ", igv=" + igv
 				+ ", imporTotal=" + imporTotal + "]";
 	}
+	
+	
+
+	
     
 	
     
