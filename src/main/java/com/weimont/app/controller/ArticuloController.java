@@ -23,6 +23,6 @@ public class ArticuloController {
 		List<Articulo> lista = articuloService.listarTodos();
 		model.addAttribute("titulo", "LISTA DE ARTICULOS");
 		model.addAttribute("articulos", lista);
-		return "/articulos/listado";
+		return "articulos/listado";
 	}
 }
