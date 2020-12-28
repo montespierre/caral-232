@@ -13,6 +13,8 @@ import javax.persistence.Table;
 @Table(name="articulos")
 public class Articulo implements Serializable{
 
+
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
