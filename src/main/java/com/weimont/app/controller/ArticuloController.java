@@ -30,7 +30,7 @@ public class ArticuloController {
 	public String crear(Model model) {
 		Articulo articulo = new Articulo();
 		model.addAttribute("titulo", "NUEVO ARTICULO");
-		model.addAttribute("articulos", articulo);
+		model.addAttribute("articulo", articulo);
 		return "articulos/frmEditar";
 	}
 }
