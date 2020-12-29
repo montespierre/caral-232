@@ -10,7 +10,7 @@
 
 	<div class="container">
 
-		<form th:object="${articulos}" method="post">
+		<form th:object="${articulo}" method="post">
 		
 			<div class="card bg-light">
 			
@@ -20,21 +20,21 @@
 					
 					<div class="form-group row">
 						<label class="col-md-2" for="descArticulo">Descripcion:</label> <input
-							type="text" th:value="{articulos.descArticulo}"
+							type="text" th:value="{articulo.descArticulo}"
 							class="form-control form-control-sm col-md-10" id="descArticulo"
 							placeholder="Nombres del producto"> <small> </small>
 					</div>
 					
 					<div class="form-group row">
 						<label class="col-md-2" for="precioUnit">Precio:</label> <input
-							type="text" th:value="{articulos.precioUnit}"
+							type="text" th:value="{articulo.precioUnit}"
 							class="form-control form-control-sm col-md-10" id="precioUnit"
 							placeholder="Precio del producto"> <small></small>
 					</div>
 					
 					<div class="form-group row">
 						<label class="col-md-2" for="cantExis">Stock:</label> <input
-							type="text" th:value="{articulos.cantExis}"
+							type="text" th:value="{articulo.cantExis}"
 							class="form-control form-control-sm col-md-10" id="cantExis"
 							placeholder="Stock del producto"> <small></small>
 					</div>
