@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/plantilla :: head">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
-pronto
+	<header th:replace="plantilla/plantilla :: header"> </header>
+
+	<div class="container">
+
+		<form th:object="${articulo}" method="post">
+		
+			<div class="card bg-light">
+			
+				<div class="card-header bg-info text-white" th:text="${titulo}"></div>
+				
+				<div class="card-body">
+					
+					<div class="form-group row">
+						<label class="col-md-2" for="descArticulo">Descripcion:</label> <input
+							type="text" th:field="*{descArticulo}"
+							class="form-control form-control-sm col-md-10" id="nombre"
+							placeholder="Nombres del producto"> <small> </small>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-md-2" for="precioUnit">Precio:</label> <input
+							type="text" th:field="*{precioUnit}"
+							class="form-control form-control-sm col-md-10" id="precio"
+							placeholder="Precio del producto"> <small></small>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-md-2" for="cantExis">Stock:</label> <input
+							type="text" th:field="*{cantExis}"
+							class="form-control form-control-sm col-md-10" id="stock"
+							placeholder="Stock del producto"> <small></small>
+					</div>
+					
+				</div>
+				<div class="card-footer bg-light">
+					<input type="submit" class="btn btn-primary btn-sm" value="Guardar">
+				</div>
+			</div>
+		</form>
+
+
+
+	</div>
+
+	<footer th:replace="plantilla/plantilla :: footer"> </footer>
+
 
 </body>
-</html>
