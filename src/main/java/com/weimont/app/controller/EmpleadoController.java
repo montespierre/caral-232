@@ -21,7 +21,7 @@ public class EmpleadoController {
 	@GetMapping({"/", "/todos"})
 	public String listar(Model model) {
 		List<Empleado> lista = empleadoService.listarTodos();
-		model.addAttribute("titulo", "LISTA DE ARTICULOS");
+		model.addAttribute("titulo", "Empleados");
 		model.addAttribute("empleados", lista);
 		return "empleados/listado";
 	}

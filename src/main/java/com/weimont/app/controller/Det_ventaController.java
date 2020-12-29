@@ -21,7 +21,7 @@ public class Det_ventaController {
 	@GetMapping({"/", "/todos"})
 	public String listar(Model model) {
 		List<Det_venta> lista = det_ventaService.listarTodos();
-		model.addAttribute("titulo", "LISTA DE ARTICULOS");
+		model.addAttribute("titulo", "Detalle de Ventas");
 		model.addAttribute("det_ventas", lista);
 		return "det_ventas/listado";
 	}

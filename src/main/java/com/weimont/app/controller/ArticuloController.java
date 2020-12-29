@@ -21,7 +21,7 @@ public class ArticuloController {
 	@GetMapping({"/", "/todos"})
 	public String listar(Model model) {
 		List<Articulo> lista = articuloService.listarTodos();
-		model.addAttribute("titulo", "LISTA DE ARTICULOS");
+		model.addAttribute("titulo", "Articulos");
 		model.addAttribute("articulos", lista);
 		return "articulos/listado";
 	}
