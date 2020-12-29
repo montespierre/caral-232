@@ -23,7 +23,7 @@ public class ArticuloServiceImpl implements ArticuloService{
 
 	@Override
 	public void grabar(Articulo articulo) {
-		// TODO Auto-generated method stub
+		repository.save(articulo);
 		
 	}
 

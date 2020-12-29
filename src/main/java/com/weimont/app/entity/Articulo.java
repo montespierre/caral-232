@@ -32,6 +32,10 @@ public class Articulo implements Serializable{
 	private Long cantExis;
 	
 	public Articulo() {
+		this.idArticulo = 0L;
+		this.descArticulo = "";
+		this.precioUnit = 0.0;
+		this.cantExis = 0L;
 
 	}
 

@@ -18,11 +18,20 @@ public class ArticuloController {
 	@Autowired
 	private ArticuloService articuloService;
 	
+	
 	@GetMapping({"/", "/todos"})
 	public String listar(Model model) {
 		List<Articulo> lista = articuloService.listarTodos();
 		model.addAttribute("titulo", "Articulos");
 		model.addAttribute("articulos", lista);
 		return "articulos/listado";
+	}
+	
+	@GetMapping("/crear")
+	public String crear(Model model) {
+	Articulo articulo = new Articulo();
+	model.addAttribute("titulo", "NUEVO ARTICULO");
+	model.addAttribute("producto", articulo);
+	return "articulos/frmEditar";
 	}
 }
