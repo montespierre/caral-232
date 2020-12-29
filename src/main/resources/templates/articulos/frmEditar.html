@@ -10,7 +10,7 @@
 
 	<div class="container">
 
-		<form th:object="${articulo}" method="post">
+		<form th:object="${articulos}" method="post">
 		
 			<div class="card bg-light">
 			
@@ -18,25 +18,22 @@
 				
 				<div class="card-body">
 					
+
+					
 					<div class="form-group row">
-						<label class="col-md-2" for="descArticulo">Descripcion:</label> <input
-							type="text" th:value="{articulo.descArticulo}"
-							class="form-control form-control-sm col-md-10" id="descArticulo"
-							placeholder="Nombres del producto"> <small> </small>
+						<label class="col-md-2" for="descArticulo">Nombre:</label> 
+						<input type="text" th:field="*{descArticulo}"
+						class="form-control form-control-sm col-md-10" id="descArticulo"
+						placeholder="Nombre de contacto"> 
+						<small></small>
 					</div>
 					
 					<div class="form-group row">
-						<label class="col-md-2" for="precioUnit">Precio:</label> <input
-							type="text" th:value="{articulo.precioUnit}"
-							class="form-control form-control-sm col-md-10" id="precioUnit"
-							placeholder="Precio del producto"> <small></small>
-					</div>
-					
-					<div class="form-group row">
-						<label class="col-md-2" for="cantExis">Stock:</label> <input
-							type="text" th:value="{articulo.cantExis}"
-							class="form-control form-control-sm col-md-10" id="cantExis"
-							placeholder="Stock del producto"> <small></small>
+						<label class="col-md-2" for="precioUnit">Nombre:</label> 
+						<input type="text" th:field="*{precioUnit}"
+						class="form-control form-control-sm col-md-10" id="precioUnit"
+						placeholder="Nombre de contacto"> 
+						<small></small>
 					</div>
 					
 				</div>

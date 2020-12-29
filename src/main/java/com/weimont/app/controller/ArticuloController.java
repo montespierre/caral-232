@@ -26,11 +26,11 @@ public class ArticuloController {
 		return "articulos/listado";
 	}
 
-	@GetMapping("/crear")
+	@GetMapping({"/crear"})
 	public String crear(Model model) {
 		Articulo articulo = new Articulo();
 		model.addAttribute("titulo", "NUEVO ARTICULO");
-		model.addAttribute("producto", articulo);
+		model.addAttribute("articulos", articulo);
 		return "articulos/frmEditar";
 	}
 }
