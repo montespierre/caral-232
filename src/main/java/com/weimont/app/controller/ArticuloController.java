@@ -31,6 +31,6 @@ public class ArticuloController {
 		Articulo articulo = new Articulo();
 		model.addAttribute("titulo", "NUEVO ARTICULO");
 		model.addAttribute("producto", articulo);
-		return "articulos/frmEditar";
+		return "/articulos/frmEditar";
 	}
 }
