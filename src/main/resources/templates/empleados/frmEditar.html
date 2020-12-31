@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/plantilla :: head">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-agregar empleados
+
+	<header th:replace="plantilla/plantilla :: header"> </header>
+
+	<div class="container">
+
+		<form th:object="${empleado}" method="post">
+		
+			<div class="card bg-light">
+			
+				<div class="card-header bg-info text-white" th:text="${titulo}"></div>
+				
+				<div class="card-body">
+					
+
+					
+					<div class="form-group row">
+						<label class="col-md-2" for="nomEmp">Nombre:</label> 
+						<input type="text" th:field="*{nomEmp}"
+						class="form-control form-control-sm col-md-10" id="nomEmp"
+						placeholder="Nombre de contacto"> 
+						<small></small>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-md-2" for="puestoEmp">Puesto:</label> 
+						<input type="text" th:field="*{puestoEmp}"
+						class="form-control form-control-sm col-md-10" id="puestoEmp"
+						placeholder="Nombre de contacto"> 
+						<small></small>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-md-2" for="telEmp">Puesto:</label> 
+						<input type="text" th:field="*{telEmp}"
+						class="form-control form-control-sm col-md-10" id="telEmp"
+						placeholder="Nombre de contacto"> 
+						<small></small>
+					</div>
+					
+				</div>
+				<div class="card-footer bg-light">
+					<input type="submit" class="btn btn-primary btn-sm" value="Guardar">
+				</div>
+			</div>
+		</form>
+
+
+
+	</div>
+
+	<footer th:replace="plantilla/plantilla :: footer"> </footer>
+
+
 </body>
-</html>
