@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.weimont.app.entity.Empleado;
@@ -34,4 +36,10 @@ public class EmpleadoController {
 		return "empleados/frmEditar";
 	}
 	
+	@PostMapping("/grabar")
+	public String guardar(@ModelAttribute Empleado empleado) {
+	empleadoService.grabar(empleado);
+	System.out.println("Empleado grabado con exito!");
+	return "redirect:/empleados/";
+	}
 }
