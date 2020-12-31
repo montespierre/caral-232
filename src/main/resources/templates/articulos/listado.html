@@ -10,6 +10,9 @@
 
 	<div class="container">
 		<h1 th:text="${titulo}"></h1>
+		
+		<a class="btn btn-primary btn-sm" th:href="@{/articulos/crear}"
+			th:text="'Nuevo Articulo'"></a>
 
 		<table class="table">
 			<thead class="thead-light">

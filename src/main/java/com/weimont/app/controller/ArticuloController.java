@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.weimont.app.entity.Articulo;
@@ -32,5 +34,12 @@ public class ArticuloController {
 		model.addAttribute("titulo", "NUEVO ARTICULO");
 		model.addAttribute("articulo", articulo);
 		return "articulos/frmEditar";
+	}
+	
+	@PostMapping("/grabar")
+	public String guardar(@ModelAttribute Articulo articulo) {
+	articuloService.grabar(articulo);
+	System.out.println("Articulo grabado con exito!");
+	return "redirect:/articulos/";
 	}
 }
