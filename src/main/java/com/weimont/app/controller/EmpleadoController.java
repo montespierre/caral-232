@@ -25,4 +25,13 @@ public class EmpleadoController {
 		model.addAttribute("empleados", lista);
 		return "empleados/listado";
 	}
+	
+	@GetMapping({"/crear"})
+	public String crear(Model model) {
+		Empleado empleado = new Empleado();
+		model.addAttribute("titulo", "NUEVO EMPLEADO");
+		model.addAttribute("empleado", empleado);
+		return "empleados/frmEditar";
+	}
+	
 }

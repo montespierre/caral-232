@@ -23,7 +23,7 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 
 	@Override
 	public void grabar(Empleado empleado) {
-		// TODO Auto-generated method stub
+		repository.save(empleado);
 		
 	}
 
